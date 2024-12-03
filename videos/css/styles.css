@@ -1,0 +1,153 @@
+:root {
+    --orange: #c03806;
+    --pink: #be0561;
+    --black: #000000;
+    --gray: #A9A9A9;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--orange);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1em;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    color: var(--orange);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: var(--black);
+    font-size: 0.9em;
+}
+
+.back-button {
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: var(--pink);
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+#video-player-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#video-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Vídeos do Colaborador">
+    <title>Catálogo de Vídeos do Colaborador</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Catálogo de Vídeos do Colaborador</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Pesquisar...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </header>
+        <main>
+            <section id="courses-section" class="tab-content active">
+                <div id="course-list" class="grid"></div>
+            </section>
+            <section id="module-section" class="tab-content">
+                <button id="back-to-courses" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</button>
+                <h2 id="module-title"></h2>
+                <div id="video-list" class="grid"></div>
+            </section>
+            <section id="video-player-section" class="tab-content">
+                <button id="back-to-module" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</button>
+                <div id="video-player-container"></div>
+            </section>
+        </main>
+    </div>
+    <script src="js/video-data.js"></script>
+    <script src="js/video-app.js"></script>
+</body>
+</html>
