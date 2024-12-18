@@ -4,24 +4,6 @@ const videoModules = {
         thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png",
         videos: [
             {
-                id: 1,
-                title: "PPTreina Parte-1",
-                url: "https://video.wixstatic.com/video/6c0358_6cba7515532f44cca9e6b0891c70257d/1080p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
-            },
-            {
-                id: 2,
-                title: "PPTreina Parte-2",
-                url: "https://video.wixstatic.com/video/6c0358_daba8d69eb6045e5ac8f5d6e1a17370e/1080p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
-            },
-            {
-                id: 3,
-                title: "PPTreina Parte-3",
-                url: "https://video.wixstatic.com/video/6c0358_daba8d69eb6045e5ac8f5d6e1a17370e/1080p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
-            },
-            {
                 id: 4,
                 title: "Apresentações Criativas",
                 url: "https://video.wixstatic.com/video/2b43fc_af7238477d4c4abd936ca0de3b25f5e2/1080p/mp4/file.mp4",
