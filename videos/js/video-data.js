@@ -40,5 +40,17 @@ const videoModules = {
                 thumbnail: "https://static.wixstatic.com/media/2b43fc_944fd660f85c431f9a7ffc9751bd82f0~mv2.png"
             }
         ]
+    },
+    pontoMais: {
+        name: "Ponto Mais",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_590d1ba0e40c451a9e6cefa9cf9c451f~mv2.png",
+        videos: [
+            {
+                id: 9,
+                title: "No Ponto Certo Com Ponto Mais",
+                url: "https://video.wixstatic.com/video/2b43fc_bd76ed5f82a44f3abedd4d0a4fcb4f5d/720p/mp4/file.mp4",
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_590d1ba0e40c451a9e6cefa9cf9c451f~mv2.png"
+            }
+        ]
     }
 };
