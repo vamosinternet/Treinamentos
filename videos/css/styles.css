@@ -140,6 +140,22 @@ h1 {
     background-color: var(--black);
 }
 
+.breadcrumbs {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: var(--gray);
+}
+
+.breadcrumbs .clickable {
+    color: var(--orange);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.breadcrumbs .clickable:hover {
+    color: var(--pink);
+}
+
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -151,3 +167,4 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
