@@ -83,7 +83,7 @@ const videoModules = {
         videos: []
     },
     pontoMais: {
-        name: "Ponto Mais",
+        name: "No Ponto Certocom VR Ponto Mais",
         thumbnail: "https://static.wixstatic.com/media/2b43fc_b927c7053fbd4bad975ddb156ee82e63~mv2.jpg",
         videos: [
             {
