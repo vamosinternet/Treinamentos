@@ -116,3 +116,4 @@ class App {
         section.classList.add('active');
     }
 }
+
