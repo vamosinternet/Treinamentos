@@ -43,7 +43,7 @@ const videoModules = {
                 id: 5,
                 title: " Passo a Passo para Preenchimento do Formulário de Feedback.",
                 url: "https://video.wixstatic.com/video/2b43fc_7a852b1a8035442f88f0759cc0333e59/720p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_0978823b8b5045b89765ec51e337e523~mv2.jpg"
+                thumbnail: "https://i0.wp.com/pontodidatica.com.br/wp-content/uploads/2017/12/feedback2.jpg?resize=1200%2C488&ssl=1"
             }
         ]
     },
