@@ -75,16 +75,6 @@ const videoModules = {
     compliance: {
         name: "Compliance",
         thumbnail: "https://example.com/compliance-thumbnail.jpg",
-        videos: []
-    },
-    clubeDoLivro: {
-        name: "Clube do Livro",
-        thumbnail: "https://example.com/clube-do-livro-thumbnail.jpg",
-        videos: []
-    },
-    pontoMais: {
-        name: "No Ponto Certocom VR Ponto Mais",
-        thumbnail: "https://static.wixstatic.com/media/2b43fc_b927c7053fbd4bad975ddb156ee82e63~mv2.jpg",
         videos: [
             {
                 id: 6,
@@ -93,6 +83,11 @@ const videoModules = {
                 thumbnail: "https://static.wixstatic.com/media/2b43fc_b927c7053fbd4bad975ddb156ee82e63~mv2.jpg"
             }
         ]
+    },
+    clubeDoLivro: {
+        name: "Clube do Livro",
+        thumbnail: "https://example.com/clube-do-livro-thumbnail.jpg",
+        videos: []
     }
 };
 
