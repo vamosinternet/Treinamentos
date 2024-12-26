@@ -78,7 +78,7 @@ const videoModules = {
         videos: [
             {
                 id: 6,
-                title: "No Ponto Certo Com Ponto Mais",
+                title: "No Ponto Certo Com VR Ponto Mais",
                 url: "https://video.wixstatic.com/video/2b43fc_d642cb5dd7dd4ef593539bc435f34654/720p/mp4/file.mp4",
                 thumbnail: "https://static.wixstatic.com/media/2b43fc_b927c7053fbd4bad975ddb156ee82e63~mv2.jpg"
             }
