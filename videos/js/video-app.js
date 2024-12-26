@@ -54,7 +54,13 @@ class App {
         this.videoList.innerHTML = '';
         videos.forEach(video => {
             const videoCard = this.createCard(video.title, '', video.thumbnail);
-            videoCard.addEventListener('click', () => this.playVideo(video));
+            videoCard.addEventListener('click', () => {
+                if (video.videos) {
+                    this.renderVideos(video.videos);
+                } else {
+                    this.playVideo(video);
+                }
+            });
             this.videoList.appendChild(videoCard);
         });
     }
