@@ -43,7 +43,7 @@ const videoModules = {
                 id: 5,
                 title: " Passo a Passo para Preenchimento do Formulário de Feedback.",
                 url: "https://video.wixstatic.com/video/2b43fc_7a852b1a8035442f88f0759cc0333e59/720p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_944fd660f85c431f9a7ffc9751bd82f0~mv2.png"
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_0978823b8b5045b89765ec51e337e523~mv2.jpg"
             }
         ]
     },
