@@ -15,6 +15,8 @@ class App {
         this.backToCourses = document.getElementById('back-to-courses');
         this.backToModule = document.getElementById('back-to-module');
         this.currentModule = null;
+        this.currentSubmodule = null;
+        this.breadcrumbs = [];
     }
 
     init() {
@@ -24,27 +26,30 @@ class App {
 
     addEventListeners() {
         this.searchInput.addEventListener('input', () => this.handleSearch());
-        this.backToCourses.addEventListener('click', () => this.showCoursesSection());
-        this.backToModule.addEventListener('click', () => this.showModuleSection());
-        this.backToModule.addEventListener('click', () => {
-            const videoPlayer = document.getElementById('video-player');
-            if (videoPlayer) {
-                videoPlayer.pause();
-            }
-        });
+        this.backToCourses.addEventListener('click', () => this.navigateBack());
+        this.backToModule.addEventListener('click', () => this.navigateBack());
     }
 
     renderCourses() {
         this.courseList.innerHTML = '';
         Object.entries(videoModules).forEach(([moduleKey, module]) => {
-            const courseCard = this.createCard(module.name, `${module.videos.length} aulas`, module.thumbnail);
+            const courseCard = this.createCard(module.name, `${this.countVideos(module.videos)} aulas`, module.thumbnail);
             courseCard.addEventListener('click', () => this.showModule(moduleKey, module));
             this.courseList.appendChild(courseCard);
         });
     }
 
+    countVideos(videos) {
+        return videos.reduce((count, video) => {
+            return count + (video.videos ? this.countVideos(video.videos) : 1);
+        }, 0);
+    }
+
     showModule(moduleKey, module) {
         this.currentModule = module;
+        this.currentSubmodule = null;
+        this.breadcrumbs = [{ name: 'Cursos', action: () => this.showCoursesSection() }, { name: module.name }];
+        this.updateBreadcrumbs();
         this.showSection(this.moduleSection);
         this.moduleTitle.textContent = module.name;
         this.renderVideos(module.videos);
@@ -56,13 +61,21 @@ class App {
             const videoCard = this.createCard(video.title, '', video.thumbnail);
             videoCard.addEventListener('click', () => {
                 if (video.videos) {
-                    this.renderVideos(video.videos);
+                    this.showSubmodule(video);
                 } else {
                     this.playVideo(video);
                 }
             });
             this.videoList.appendChild(videoCard);
         });
+    }
+
+    showSubmodule(submodule) {
+        this.currentSubmodule = submodule;
+        this.breadcrumbs.push({ name: submodule.title });
+        this.updateBreadcrumbs();
+        this.moduleTitle.textContent = submodule.title;
+        this.renderVideos(submodule.videos);
     }
 
     playVideo(video) {
@@ -101,7 +114,7 @@ class App {
         }, {});
         this.courseList.innerHTML = '';
         Object.entries(filteredModules).forEach(([moduleKey, module]) => {
-            const courseCard = this.createCard(module.name, `${module.videos.length} aulas`, module.thumbnail);
+            const courseCard = this.createCard(module.name, `${this.countVideos(module.videos)} aulas`, module.thumbnail);
             courseCard.addEventListener('click', () => this.showModule(moduleKey, module));
             this.courseList.appendChild(courseCard);
         });
@@ -112,14 +125,43 @@ class App {
         this.renderCourses();
     }
 
-    showModuleSection() {
-        this.showSection(this.moduleSection);
-        this.renderVideos(this.currentModule.videos);
-    }
-
     showSection(section) {
         [this.coursesSection, this.moduleSection, this.videoPlayerSection].forEach(s => s.classList.remove('active'));
         section.classList.add('active');
+    }
+
+    navigateBack() {
+        if (this.breadcrumbs.length > 1) {
+            this.breadcrumbs.pop();
+            const lastBreadcrumb = this.breadcrumbs[this.breadcrumbs.length - 1];
+            if (lastBreadcrumb.action) {
+                lastBreadcrumb.action();
+            } else {
+                this.showModule(this.currentModule.name, this.currentModule);
+            }
+        } else {
+            this.showCoursesSection();
+        }
+    }
+
+    updateBreadcrumbs() {
+        const breadcrumbsContainer = document.createElement('div');
+        breadcrumbsContainer.classList.add('breadcrumbs');
+        this.breadcrumbs.forEach((crumb, index) => {
+            const crumbElement = document.createElement('span');
+            crumbElement.textContent = crumb.name;
+            if (crumb.action) {
+                crumbElement.classList.add('clickable');
+                crumbElement.addEventListener('click', crumb.action);
+            }
+            breadcrumbsContainer.appendChild(crumbElement);
+            if (index < this.breadcrumbs.length - 1) {
+                const separator = document.createElement('span');
+                separator.textContent = ' > ';
+                breadcrumbsContainer.appendChild(separator);
+            }
+        });
+        this.moduleSection.insertBefore(breadcrumbsContainer, this.moduleSection.firstChild);
     }
 }
 
