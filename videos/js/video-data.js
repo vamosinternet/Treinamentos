@@ -9,28 +9,35 @@ const videoModules = {
         thumbnail: "https://example.com/pdl-thumbnail.jpg",
         videos: [
             {
-                id: 1,
+                id: "apresentacoes-criativas",
                 title: "Apresentações Criativas",
-                url: "https://video.wixstatic.com/video/2b43fc_af7238477d4c4abd936ca0de3b25f5e2/1080p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
-            },
-            {
-                id: 2,
-                title: "Identidade Visual",
-                url: "https://video.wixstatic.com/video/2b43fc_ec2e1d6ed8844d89ad0b2a427ed48e4b/1080p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
-            },
-            {
-                id: 3,
-                title: "Exercício prático",
-                url: "https://video.wixstatic.com/video/2b43fc_89ae9380b33640be8691f11442944215/1080p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
-            },
-            {
-                id: 4,
-                title: "Exercício prático - parte 2",
-                url: "https://video.wixstatic.com/video/2b43fc_89ae9380b33640be8691f11442944215/1080p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png",
+                videos: [
+                    {
+                        id: 1,
+                        title: "Apresentações Criativas",
+                        url: "https://video.wixstatic.com/video/2b43fc_af7238477d4c4abd936ca0de3b25f5e2/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    },
+                    {
+                        id: 2,
+                        title: "Identidade Visual",
+                        url: "https://video.wixstatic.com/video/2b43fc_ec2e1d6ed8844d89ad0b2a427ed48e4b/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    },
+                    {
+                        id: 3,
+                        title: "Exercício prático",
+                        url: "https://video.wixstatic.com/video/2b43fc_89ae9380b33640be8691f11442944215/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    },
+                    {
+                        id: 4,
+                        title: "Exercício prático - parte 2",
+                        url: "https://video.wixstatic.com/video/2b43fc_89ae9380b33640be8691f11442944215/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    }
+                ]
             },
             {
                 id: 5,
@@ -80,7 +87,7 @@ const videoModules = {
         thumbnail: "https://static.wixstatic.com/media/2b43fc_b927c7053fbd4bad975ddb156ee82e63~mv2.jpg",
         videos: [
             {
-                id: 3,
+                id: 6,
                 title: "No Ponto Certo Com Ponto Mais",
                 url: "https://video.wixstatic.com/video/2b43fc_d642cb5dd7dd4ef593539bc435f34654/720p/mp4/file.mp4",
                 thumbnail: "https://static.wixstatic.com/media/2b43fc_b927c7053fbd4bad975ddb156ee82e63~mv2.jpg"
