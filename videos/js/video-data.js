@@ -93,9 +93,9 @@ const videoModules = {
             }
         ]
     },
-    clubeDoLivro: {
+    "clubeDoLivro: {
         name: "Clube do Livro",
         thumbnail: "https://example.com/clube-do-livro-thumbnail.jpg",
-        videos: []
+        videos: []"
     }
 };
