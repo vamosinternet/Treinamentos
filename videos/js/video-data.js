@@ -1,7 +1,7 @@
-const videoModules = {
+export const videoModules = {
     onboarding: {
         name: "Onboarding",
-        thumbnail: "https://example.com/onboarding-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_cc7d6d4ae3434174942b9ed7bfbbf025~mv2.jpg",
         videos: []
     },
     pdl: {
@@ -49,17 +49,17 @@ const videoModules = {
     },
     saudeSeguracaBemEstar: {
         name: "+Saúde, Segurança e Bem-Estar",
-        thumbnail: "https://example.com/saude-seguranca-bem-estar-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_8310a8abac3b493fbea70e72c12ba37a~mv2.jpg",
         videos: []
     },
     vendas: {
         name: "+Vendas",
-        thumbnail: "https://example.com/vendas-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_61e532276b04481a850c129a7dbbe450~mv2.jpg",
         videos: []
     },
     escolaDeLideres: {
         name: "Escola de Líderes",
-        thumbnail: "https://example.com/escola-de-lideres-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_08759265134c432f8ed02b953514d7fd~mv2.jpg",
         videos: []
     },
     telecom: {
@@ -90,4 +90,3 @@ const videoModules = {
         videos: []
     }
 };
-
