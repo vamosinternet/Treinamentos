@@ -1,7 +1,7 @@
 const videoModules = {
     onboarding: {
         name: "Onboarding",
-        thumbnail: "https://example.com/onboarding-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_79e50d8930734ed59bd902a1248d7ded~mv2.jpg",
         videos: []
     },
     pdl: {
@@ -54,12 +54,12 @@ const videoModules = {
     },
     vendas: {
         name: "+Vendas",
-        thumbnail: "https://static.wixstatic.com/media/2b43fc_9c664bae2f39439db95b23dbf07e40b3~mv2.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_89627cd42f68406f9bfa1f27aa59ba45~mv2.jpg",
         videos: []
     },
     escolaDeLideres: {
         name: "Escola de Líderes",
-        thumbnail: "https://example.com/escola-de-lideres-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_9c664bae2f39439db95b23dbf07e40b3~mv2.jpg",
         videos: []
     },
     telecom: {
