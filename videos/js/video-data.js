@@ -50,7 +50,16 @@ const videoModules = {
     saudeSeguracaBemEstar: {
         name: "+Saúde, Segurança e Bem-Estar",
         thumbnail: "https://static.wixstatic.com/media/2b43fc_ea2eb6e2f83140c8991d7ebb3d7bf172~mv2.jpg",
-        videos: []
+        videos: [
+            {
+                id: 7,
+                title: "Treinamento Diretrizes e kit do Cipeiro",
+                url: "https://drive.google.com/file/d/14uCXa1jL2szP5oo8oZoIUeDljYaDPYP_/view?usp=drive_link",
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_3cd202b7b6bc4e55aae918358d54997a~mv2.png"
+            }
+
+
+        ]
     },
     vendas: {
         name: "+Vendas",
