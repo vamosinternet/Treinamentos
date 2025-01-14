@@ -1,189 +1,92 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new App();
-  app.init();
-});
-
-class App {
-  constructor() {
-    this.searchInput = document.getElementById('search-input');
-    this.coursesSection = document.getElementById('courses-section');
-    this.moduleSection = document.getElementById('module-section');
-    this.videoPlayerSection = document.getElementById('video-player-section');
-    this.courseList = document.getElementById('course-list');
-    this.videoList = document.getElementById('video-list');
-    this.moduleTitle = document.getElementById('module-title');
-    this.backToCourses = document.getElementById('back-to-courses');
-    this.backToModule = document.getElementById('back-to-module');
-    this.currentModule = null;
-    this.currentSubmodule = null;
-    this.breadcrumbs = [];
-  }
-
-  init() {
-    this.renderCourses();
-    this.addEventListeners();
-  }
-
-  addEventListeners() {
-    this.searchInput.addEventListener('input', () => this.handleSearch());
-    this.backToCourses.addEventListener('click', () => this.navigateBack());
-    this.backToModule.addEventListener('click', () => this.navigateBack());
-  }
-
-  renderCourses() {
-    this.courseList.innerHTML = '';
-    Object.entries(videoModules).forEach(([moduleKey, module]) => {
-      const courseCard = this.createCard(module.name, `${this.countVideos(module.videos)} aulas`, module.thumbnail);
-      courseCard.addEventListener('click', () => this.showModule(moduleKey, module));
-      this.courseList.appendChild(courseCard);
-    });
-  }
-
-  countVideos(videos) {
-    return videos.reduce((count, video) => {
-      return count + (video.videos ? this.countVideos(video.videos) : 1);
-    }, 0);
-  }
-
-  showModule(moduleKey, module) {
-    this.currentModule = module;
-    this.currentSubmodule = null;
-    this.breadcrumbs = [
-      { name: 'Cursos', action: () => this.showCoursesSection() },
-      { name: module.name }
-    ];
-    this.updateBreadcrumbs();
-    this.showSection(this.moduleSection);
-    this.moduleTitle.textContent = module.name;
-    this.renderVideos(module.videos);
-  }
-
-  renderVideos(videos) {
-    this.videoList.innerHTML = '';
-    videos.forEach(video => {
-      const videoCard = this.createCard(video.title, '', video.thumbnail);
-      videoCard.addEventListener('click', () => {
-        if (video.videos) {
-          this.showSubmodule(video);
-        } else {
-          this.playVideo(video);
-        }
-      });
-      this.videoList.appendChild(videoCard);
-    });
-  }
-
-  showSubmodule(submodule) {
-    this.currentSubmodule = submodule;
-    this.breadcrumbs.push({ name: submodule.title });
-    this.updateBreadcrumbs();
-    this.moduleTitle.textContent = submodule.title;
-    this.renderVideos(submodule.videos);
-  }
-
-  playVideo(video) {
-    this.showSection(this.videoPlayerSection);
-    const videoPlayerContainer = document.getElementById('video-player-container');
-    videoPlayerContainer.innerHTML = `
-      <video id="video-player" controls>
-        <source src="${video.url}" type="video/mp4">
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-      <h3>${video.title}</h3>
-    `;
-  }
-
-  createCard(title, description, image) {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    
-    const imageElement = document.createElement('img');
-    imageElement.src = image;
-    imageElement.alt = title;
-    imageElement.onload = () => {
-      if (imageElement.naturalWidth > 800 || imageElement.naturalHeight > 600) {
-        card.classList.add('large-image');
-      }
-    };
-    
-    const contentDiv = document.createElement('div');
-    contentDiv.classList.add('card-content');
-    
-    const titleElement = document.createElement('h3');
-    titleElement.classList.add('card-title');
-    titleElement.textContent = title;
-    
-    const descriptionElement = document.createElement('p');
-    descriptionElement.classList.add('card-description');
-    descriptionElement.textContent = description;
-    
-    contentDiv.appendChild(titleElement);
-    contentDiv.appendChild(descriptionElement);
-    
-    card.appendChild(imageElement);
-    card.appendChild(contentDiv);
-    
-    return card;
-  }
-
-  handleSearch() {
-    const searchTerm = this.searchInput.value.toLowerCase();
-    const filteredModules = Object.entries(videoModules).reduce((acc, [moduleKey, module]) => {
-      if (module.name.toLowerCase().includes(searchTerm)) {
-        acc[moduleKey] = module;
-      }
-      return acc;
-    }, {});
-    this.courseList.innerHTML = '';
-    Object.entries(filteredModules).forEach(([moduleKey, module]) => {
-      const courseCard = this.createCard(module.name, `${this.countVideos(module.videos)} aulas`, module.thumbnail);
-      courseCard.addEventListener('click', () => this.showModule(moduleKey, module));
-      this.courseList.appendChild(courseCard);
-    });
-  }
-
-  showCoursesSection() {
-    this.showSection(this.coursesSection);
-    this.renderCourses();
-  }
-
-  showSection(section) {
-    [this.coursesSection, this.moduleSection, this.videoPlayerSection].forEach(s => s.classList.remove('active'));
-    section.classList.add('active');
-  }
-
-  navigateBack() {
-    if (this.breadcrumbs.length > 1) {
-      this.breadcrumbs.pop();
-      const lastBreadcrumb = this.breadcrumbs[this.breadcrumbs.length - 1];
-      if (lastBreadcrumb.action) {
-        lastBreadcrumb.action();
-      } else {
-        this.showModule(this.currentModule.name, this.currentModule);
-      }
-    } else {
-      this.showCoursesSection();
+const videoModules = {
+    onboarding: {
+        name: "Onboarding",
+        thumbnail: "https://example.com/onboarding-thumbnail.jpg",
+        videos: []
+    },
+    pdl: {
+        name: "PDL",
+        thumbnail: "https://example.com/pdl-thumbnail.jpg",
+        videos: [
+            {
+                id: "apresentacoes-criativas",
+                title: "Apresentações Criativas",
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png",
+                videos: [
+                    {
+                        id: 1,
+                        title: "Apresentações Criativas",
+                        url: "https://video.wixstatic.com/video/2b43fc_af7238477d4c4abd936ca0de3b25f5e2/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    },
+                    {
+                        id: 2,
+                        title: "Identidade Visual",
+                        url: "https://video.wixstatic.com/video/2b43fc_ec2e1d6ed8844d89ad0b2a427ed48e4b/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    },
+                    {
+                        id: 3,
+                        title: "Exercício prático",
+                        url: "https://video.wixstatic.com/video/2b43fc_89ae9380b33640be8691f11442944215/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    },
+                    {
+                        id: 4,
+                        title: "Exercício prático - parte 2",
+                        url: "https://video.wixstatic.com/video/2b43fc_89ae9380b33640be8691f11442944215/1080p/mp4/file.mp4",
+                        thumbnail: "https://static.wixstatic.com/media/2b43fc_b605a77ab0f04eb482b3682c12d38a0c~mv2.png"
+                    }
+                ]
+            },
+            {
+                id: 5,
+                title: " Passo a Passo para Preenchimento do Formulário de Feedback.",
+                url: "https://video.wixstatic.com/video/2b43fc_7a852b1a8035442f88f0759cc0333e59/720p/mp4/file.mp4",
+                thumbnail: "https://i0.wp.com/pontodidatica.com.br/wp-content/uploads/2017/12/feedback2.jpg?resize=1200%2C488&ssl=1"
+            }
+        ]
+    },
+    saudeSeguracaBemEstar: {
+        name: "+Saúde, Segurança e Bem-Estar",
+        thumbnail: "https://example.com/saude-seguranca-bem-estar-thumbnail.jpg",
+        videos: []
+    },
+    vendas: {
+        name: "+Vendas",
+        thumbnail: "https://example.com/vendas-thumbnail.jpg",
+        videos: []
+    },
+    escolaDeLideres: {
+        name: "Escola de Líderes",
+        thumbnail: "https://example.com/escola-de-lideres-thumbnail.jpg",
+        videos: []
+    },
+    telecom: {
+        name: "Telecom",
+        thumbnail: "https://example.com/telecom-thumbnail.jpg",
+        videos: []
+    },
+    sucessoDoCliente: {
+        name: "Sucesso do Cliente",
+        thumbnail: "https://example.com/sucesso-do-cliente-thumbnail.jpg",
+        videos: []
+    },
+    compliance: {
+        name: "Compliance",
+        thumbnail: "https://example.com/compliance-thumbnail.jpg",
+        videos: [
+            {
+                id: 6,
+                title: "No Ponto Certo Com VR Ponto Mais",
+                url: "https://video.wixstatic.com/video/2b43fc_d642cb5dd7dd4ef593539bc435f34654/720p/mp4/file.mp4",
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_b927c7053fbd4bad975ddb156ee82e63~mv2.jpg"
+            }
+        ]
+    },
+    clubeDoLivro: {
+        name: "Clube do Livro",
+        thumbnail: "https://example.com/clube-do-livro-thumbnail.jpg",
+        videos: []
     }
-  }
-
-  updateBreadcrumbs() {
-    const breadcrumbsContainer = document.createElement('div');
-    breadcrumbsContainer.classList.add('breadcrumbs');
-    this.breadcrumbs.forEach((crumb, index) => {
-      const crumbElement = document.createElement('span');
-      crumbElement.textContent = crumb.name;
-      if (crumb.action) {
-        crumbElement.classList.add('clickable');
-        crumbElement.addEventListener('click', crumb.action);
-      }
-      breadcrumbsContainer.appendChild(crumbElement);
-      if (index < this.breadcrumbs.length - 1) {
-        const separator = document.createElement('span');
-        separator.textContent = ' > ';
-        breadcrumbsContainer.appendChild(separator);
-      }
-    });
-    this.moduleSection.insertBefore(breadcrumbsContainer, this.moduleSection.firstChild);
-  }
-}
-
+};
