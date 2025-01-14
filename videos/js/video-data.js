@@ -54,7 +54,7 @@ const videoModules = {
     },
     vendas: {
         name: "+Vendas",
-        thumbnail: "https://example.com/vendas-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_9c664bae2f39439db95b23dbf07e40b3~mv2.jpg",
         videos: []
     },
     escolaDeLideres: {
