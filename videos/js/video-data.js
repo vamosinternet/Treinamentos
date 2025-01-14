@@ -1,4 +1,4 @@
-export const videoModules = {
+const videoModules = {
     onboarding: {
         name: "Onboarding",
         thumbnail: "https://static.wixstatic.com/media/2b43fc_cc7d6d4ae3434174942b9ed7bfbbf025~mv2.jpg",
