@@ -53,7 +53,7 @@ const videoModules = {
         videos: [
             {
                 id: 7,
-                title: "Treinamento Diretrizes e kit do Cipeiro",
+                title: "Diretrizes e Kit da CIPA",
                 url: "https://video.wixstatic.com/video/2b43fc_6c17c8f2ec30406985b6832971fe1d67/720p/mp4/file.mp4",
                 thumbnail: "https://static.wixstatic.com/media/2b43fc_3cd202b7b6bc4e55aae918358d54997a~mv2.png"
             }
