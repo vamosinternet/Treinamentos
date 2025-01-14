@@ -49,7 +49,7 @@ const videoModules = {
     },
     saudeSeguracaBemEstar: {
         name: "+Saúde, Segurança e Bem-Estar",
-        thumbnail: "https://example.com/saude-seguranca-bem-estar-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_ea2eb6e2f83140c8991d7ebb3d7bf172~mv2.jpg",
         videos: []
     },
     vendas: {
