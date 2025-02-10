@@ -2,7 +2,14 @@ const videoModules = {
     onboarding: {
         name: "Onboarding",
         thumbnail: "https://static.wixstatic.com/media/2b43fc_79e50d8930734ed59bd902a1248d7ded~mv2.jpg",
-        videos: []
+        videos: [
+            {
+                id: "Onboarding",
+                title: "Onboarding",
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_79e50d8930734ed59bd902a1248d7ded~mv2.jpg",
+                url: "https://video.wixstatic.com/video/2b43fc_580fdd739bf04dc098cb105d66d8c4ee/720p/mp4/file.mp4"
+            }
+        ]
     },
     pdl: {
         name: "PDL",
