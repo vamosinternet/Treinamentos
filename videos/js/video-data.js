@@ -13,7 +13,7 @@ const videoModules = {
     },
     pdl: {
         name: "PDL",
-        thumbnail: "https://example.com/pdl-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_9c664bae2f39439db95b23dbf07e40b3~mv2.jpg",
         videos: [
             {
                 id: "apresentacoes-criativas",
@@ -75,7 +75,7 @@ const videoModules = {
     },
     escolaDeLideres: {
         name: "Escola de Líderes",
-        thumbnail: "https://static.wixstatic.com/media/2b43fc_9c664bae2f39439db95b23dbf07e40b3~mv2.jpg",
+        thumbnail: "https://example.com/telecom-thumbnail.jpg",
         videos: []
     },
     telecom: {
