@@ -56,7 +56,7 @@ const videoModules = {
                 id: 8, // Using a new ID that doesn't conflict with existing ones
                 title: "Treinamento Gestão e Seleção por Competências",
                 url: "https://video.wixstatic.com/video/2b43fc_c10eb97902fd47efb5eb0847cd11d938/720p/mp4/file.mp4",
-                thumbnail: "/placeholder.svg" // You may want to replace this with an actual thumbnail
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_d29138679e4343918558c67f4d1ab59f~mv2.png" // You may want to replace this with an actual thumbnail
             }
         ]
     },
