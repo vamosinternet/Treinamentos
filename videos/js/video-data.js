@@ -56,13 +56,13 @@ const videoModules = {
                 id: 8,
                 title: "Treinamento Gestão e Seleção por Competências",
                 url: "https://video.wixstatic.com/video/2b43fc_c10eb97902fd47efb5eb0847cd11d938/720p/mp4/file.mp4",
-                thumbnail: "/placeholder.svg"
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_d29138679e4343918558c67f4d1ab59f~mv2.png"
             },
             {
                 id: 9,
                 title: "Plantão de Dúvidas sobre Competências",
                 url: "https://video.wixstatic.com/video/2b43fc_ff0b5ee5238a40d7ab2d245af221f48c/720p/mp4/file.mp4",
-                thumbnail: "/placeholder.svg"
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_d29138679e4343918558c67f4d1ab59f~mv2.png"
             }
         ]
     },
