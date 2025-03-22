@@ -51,6 +51,12 @@ const videoModules = {
                 title: " Passo a Passo para Preenchimento do Formulário de Feedback.",
                 url: "https://video.wixstatic.com/video/2b43fc_7a852b1a8035442f88f0759cc0333e59/720p/mp4/file.mp4",
                 thumbnail: "https://i0.wp.com/pontodidatica.com.br/wp-content/uploads/2017/12/feedback2.jpg?resize=1200%2C488&ssl=1"
+            },
+            {
+                id: 8, // Using a new ID that doesn't conflict with existing ones
+                title: "Treinamento Gestão e Seleção por Competências",
+                url: "https://video.wixstatic.com/video/2b43fc_c10eb97902fd47efb5eb0847cd11d938/720p/mp4/file.mp4",
+                thumbnail: "/placeholder.svg" // You may want to replace this with an actual thumbnail
             }
         ]
     },
@@ -64,8 +70,6 @@ const videoModules = {
                 url: "https://video.wixstatic.com/video/2b43fc_6c17c8f2ec30406985b6832971fe1d67/720p/mp4/file.mp4",
                 thumbnail: "https://static.wixstatic.com/media/2b43fc_3cd202b7b6bc4e55aae918358d54997a~mv2.png"
             }
-
-
         ]
     },
     vendas: {
