@@ -62,7 +62,7 @@ const videoModules = {
                 id: 9,
                 title: "Plantão de Dúvidas sobre Competências",
                 url: "https://video.wixstatic.com/video/2b43fc_ff0b5ee5238a40d7ab2d245af221f48c/720p/mp4/file.mp4",
-                thumbnail: "https://static.wixstatic.com/media/2b43fc_d29138679e4343918558c67f4d1ab59f~mv2.png"
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_470fc5628c484c8bb3c86cb6862ea2e5~mv2.jpg"
             }
         ]
     },
