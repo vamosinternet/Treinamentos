@@ -122,13 +122,13 @@ const videoModules = {
             {
                 id: "intro-ams",
                 title: "Introdução ao AMS",
-                url: "https://example.com/videos/introducao-ams.mp4",
+                url: "https://video.wixstatic.com/video/2b43fc_8184281098cc4149aef4ab4813fb9a87/1080p/mp4/file.mp4",
                 thumbnail: "https://example.com/thumbnails/introducao-ams.jpg"
             },
             {
                 id: "slot-pon",
                 title: "Identificar SLOT E PON",
-                url: "https://example.com/videos/identificar-slot-pon.mp4",
+                url: "https://video.wixstatic.com/video/2b43fc_31e95c27457c4b2d92cf8cbb69305ff9/1080p/mp4/file.mp4",
                 thumbnail: "https://example.com/thumbnails/identificar-slot-pon.jpg"
             },
             {
