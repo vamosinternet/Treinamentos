@@ -123,13 +123,13 @@ const videoModules = {
                 id: "intro-ams",
                 title: "Introdução ao AMS",
                 url: "https://video.wixstatic.com/video/2b43fc_8184281098cc4149aef4ab4813fb9a87/1080p/mp4/file.mp4",
-                thumbnail: "https://example.com/thumbnails/introducao-ams.jpg"
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_77345407aab14a5982e41639daea2d5a~mv2.jpg"
             },
             {
                 id: "slot-pon",
                 title: "Identificar SLOT E PON",
                 url: "https://video.wixstatic.com/video/2b43fc_31e95c27457c4b2d92cf8cbb69305ff9/1080p/mp4/file.mp4",
-                thumbnail: "https://example.com/thumbnails/identificar-slot-pon.jpg"
+                thumbnail: "https://static.wixstatic.com/media/2b43fc_a97d6a5e544245dfb139c0c376aeefc5~mv2.jpg"
             },
             {
                 id: "queda-pon",
