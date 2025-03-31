@@ -135,7 +135,8 @@ const videoModules = {
                 id: "queda-pon",
                 title: "Verificação de Queda de PON",
                 url: "https://example.com/videos/verificacao-queda-pon.mp4",
-                thumbnail: "https://example.com/thumbnails/verificacao-queda-pon.jpg"
+                thumbnail: "https://example.com/thumbnails/verificacao-queda-pon.jpg",
+                disabled: true // This video is disabled but can be enabled later
             }
         ]
     }
