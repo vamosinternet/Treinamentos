@@ -114,5 +114,29 @@ const videoModules = {
         name: "Clube do Livro",
         thumbnail: "https://example.com/clube-do-livro-thumbnail.jpg",
         videos: []
+    },
+    treinamentoAMS: {
+        name: "Treinamento AMS",
+        thumbnail: "https://example.com/treinamento-ams-thumbnail.jpg",
+        videos: [
+            {
+                id: "intro-ams",
+                title: "Introdução ao AMS",
+                url: "https://example.com/videos/introducao-ams.mp4",
+                thumbnail: "https://example.com/thumbnails/introducao-ams.jpg"
+            },
+            {
+                id: "slot-pon",
+                title: "Identificar SLOT E PON",
+                url: "https://example.com/videos/identificar-slot-pon.mp4",
+                thumbnail: "https://example.com/thumbnails/identificar-slot-pon.jpg"
+            },
+            {
+                id: "queda-pon",
+                title: "Verificação de Queda de PON",
+                url: "https://example.com/videos/verificacao-queda-pon.mp4",
+                thumbnail: "https://example.com/thumbnails/verificacao-queda-pon.jpg"
+            }
+        ]
     }
 };
