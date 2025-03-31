@@ -41,6 +41,8 @@ class App {
 
     countVideos(videos) {
         return videos.reduce((count, video) => {
+            // Skip disabled videos in the count
+            if (video.disabled) return count;
             return count + (video.videos ? this.countVideos(video.videos) : 1);
         }, 0);
     }
@@ -58,6 +60,9 @@ class App {
     renderVideos(videos) {
         this.videoList.innerHTML = '';
         videos.forEach(video => {
+            // Skip disabled videos
+            if (video.disabled) return;
+            
             const videoCard = this.createCard(video.title, '', video.thumbnail);
             videoCard.addEventListener('click', () => {
                 if (video.videos) {
@@ -164,4 +169,3 @@ class App {
         this.moduleSection.insertBefore(breadcrumbsContainer, this.moduleSection.firstChild);
     }
 }
-
