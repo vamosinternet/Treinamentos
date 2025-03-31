@@ -117,7 +117,7 @@ const videoModules = {
     },
     treinamentoAMS: {
         name: "Treinamento AMS",
-        thumbnail: "https://example.com/treinamento-ams-thumbnail.jpg",
+        thumbnail: "https://static.wixstatic.com/media/2b43fc_cede33a141fc48e28e604fcac5353877~mv2.jpg",
         videos: [
             {
                 id: "intro-ams",
